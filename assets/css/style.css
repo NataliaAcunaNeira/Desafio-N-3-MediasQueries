@@ -51,8 +51,8 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 8px;
     box-sizing: border-box;
+
 }
 
 .cuadro {
@@ -70,10 +70,10 @@ main {
     display: grid;
     grid-template-areas: "aside nav"
         "aside section"
-        "footer pagination";
+        "footer section";
     height: 100vh;
     grid-template-columns: 20% auto;
-    grid-template-rows: 10% auto 12%;
+    grid-template-rows: 10% auto 10%;
 
 }
 
@@ -150,7 +150,6 @@ h3 {
         grid-template-areas: "aside"
             "nav"
             "section"
-            "paginacion"
             "footer";
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto auto auto;
