@@ -140,6 +140,10 @@ h3 {
     font-weight: bold;
 }
 
+.fas.fa-bars {
+    display: none;
+}
+
 @media screen and (max-width: 576px) {
     main {
         display: grid;
@@ -170,4 +174,8 @@ h3 {
         display: none
     }
 
+    .fas.fa-bars {
+        display: flex;
+        justify-content: end;
+    }
 }
