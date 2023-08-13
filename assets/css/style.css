@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+}
+
+
+
+aside {
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+    background-color: bisque;
+    color: rgb(111, 199, 247);
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgb(248, 239, 246);
+    color: rgb(111, 199, 247);
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+
+}
+
+button {
+    color: rgb(233, 154, 195);
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(129, 217, 235);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.cuadro {
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    border: 2px solid rgb(129, 217, 235);
+}
+
+main {
+    display: grid;
+    grid-template-areas: "aside nav"
+        "aside section"
+        "footer pagination";
+    height: 100vh;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 10% auto 12%;
+
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+}
+
+h3 {
+    padding: 15px
+}
+
+.filtros {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: start;
+
+
+
+}
+
+.filtros select {
+    font-size: 100%;
+    border: 0.1rem salmon;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px;
+
+}
+
+.paginacion {
+    margin: 0px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 239, 246)
+}
+
+.paginacion ul {
+    list-style: none;
+    text-align: center;
+}
+
+.paginacion ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.paginacion ul li a {
+    display: block;
+    padding: 10px 10px;
+    color: #fff;
+    background-color: rgb(129, 217, 235);
+    text-decoration: none;
+}
+
+.paginacion ul li a:hover {
+    background-color: rgb(129, 217, 235);
+}
+
+.paginacion ul li .active {
+    background-color: rgb(129, 217, 235);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        display: grid;
+        grid-template-areas: "aside"
+            "nav"
+            "section"
+            "paginacion"
+            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+
+    }
+
+    .grid {
+        grid-area: section;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        background-color: rgb(248, 239, 246);
+        color: rgb(111, 199, 247);
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 15px;
+
+    }
+
+    .header-list {
+        display: none
+    }
+
+}
